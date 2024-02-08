@@ -1,4 +1,4 @@
-module github.com/openshift/pipelines-vote-api
+module github.com/devopslab-ecl/vote-api
 
 go 1.14
 
