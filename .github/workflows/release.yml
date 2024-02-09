@@ -31,6 +31,6 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         push: true
-        tags: ${{ secrets.REGISTRY_SERVER }}/vote-app/vote-api:${{ github.event.release.name }}
+        tags: ${{ secrets.REGISTRY_SERVER }}/vote-app/vote-api:${{ github.event.release.tag_name }}
         file: Dockerfile
       
