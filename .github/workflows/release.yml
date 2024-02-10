@@ -61,7 +61,7 @@ jobs:
             workflow_id: '85600586',
             ref: 'main',
             inputs: {
-              message: '${{ steps.git-message.outputs.message }}',
+              message: 'Released ${{ github.event.release.tag_name }}',
               image: '${{ secrets.REGISTRY_SERVER }}/vote-app/vote-api:${{ github.event.release.tag_name }}',
               version: '${{ github.event.release.tag_name }}'
             }
