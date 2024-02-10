@@ -58,7 +58,7 @@ jobs:
           await github.rest.actions.createWorkflowDispatch({
             owner: 'devopslab-ecl',
             repo: 'vote-app-gitops',
-            workflow_id: 'update-api-version.yaml',
+            workflow_id: '.github/workflows/update_api_version.yaml',
             ref: 'main',
             inputs: {
               message: '${{ steps.git-message.outputs.message }}',
