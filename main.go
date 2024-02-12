@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"net/http"
+	"fmt"
 
 	"github.com/gin-gonic/gin"
 )
@@ -34,6 +35,7 @@ func setupRouter() *gin.Engine {
 		buf := make([]byte, 1024)
 		num, _ := c.Request.Body.Read(buf)
 		reqBody := buf[0:num]
+		fmt.Printf("REQUEST: %s", string(reqBody))
 		temp := map[string]string{}
 		json.Unmarshal(reqBody, &temp)
 		c.JSON(http.StatusOK, reqBody)
